@@ -9,6 +9,17 @@
 
 const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 
+const map1 = randomNumbers.map(x => {
+  if (x % 2 == 1) {
+    
+    return x
+  }
+})
+
+const filteredMap1 = map1.filter(x => x !== undefined);
+
+
+
 /*
   02
 
@@ -16,6 +27,10 @@ const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 */
 
 const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
+
+const numbersLesserThan501 = crazyNumbers.reduce((accumulator, item) => (item < 501) + accumulator, 0)
+
+
 
 /*
   03
@@ -27,6 +42,9 @@ const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
 */
 
 const numbers = [5, 7, 3]
+
+const map2 = numbers.map(number => number ** 2)
+
 
 /*
   04
@@ -49,6 +67,11 @@ const tarantinoMovies = [
   { name: 'Kill Bill: Volume 1', release: 2003 }
 ]
 
+const filmsAiredBefore2000 = tarantinoMovies.filter((films) => films.release < 2000)
+  
+
+
+
 /*
   05
 
@@ -65,6 +88,14 @@ const tvShows = [
   { name: 'House M.D.', releaseYear: 2004 },
   { name: 'Watchmen', releaseYear: 2019 }
 ]
+
+const tvShowsName = tvShows.reduce((accumulator, shows, i) => {
+  while(i != shows.name) {
+    return shows.name
+  }
+})
+
+console.log(tvShowsName)
 
 /*
   06
